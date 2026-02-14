@@ -1,306 +1,216 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Heart, Share2, ChefHat } from 'lucide-react';
-import { getRecipesByState, stateRecipes } from '../data/regionalRecipes';
-import GlassButton from './GlassButton';
 
-const InteractiveIndiaMap = () => {
-    const [selectedState, setSelectedState] = useState(null);
+/**
+ * Interactive India heatmap — state circle color intensity driven by recipe count.
+ *
+ * Props:
+ *   counts       — {stateCode: number}  recipe counts per state
+ *   names        — {stateCode: string}  state names
+ *   maxCount     — number               max recipe count for color scaling
+ *   onStateClick — (stateCode) => void
+ */
+const InteractiveIndiaMap = ({ counts = {}, names = {}, maxCount = 1, onStateClick }) => {
     const [hoveredState, setHoveredState] = useState(null);
-    const [favorites, setFavorites] = useState([]);
 
-    const handleStateClick = (stateCode) => {
-        setSelectedState(stateCode);
-    };
+    /* ──── State positions on the SVG canvas ──── */
+    const statePositions = useMemo(() => ([
+        { code: 'JK', x: 175, y: 58 },
+        { code: 'HP', x: 210, y: 100 },
+        { code: 'PB', x: 180, y: 120 },
+        { code: 'UK', x: 250, y: 110 },
+        { code: 'HR', x: 220, y: 145 },
+        { code: 'DL', x: 235, y: 135 },
+        { code: 'RJ', x: 155, y: 205 },
+        { code: 'UP', x: 290, y: 180 },
+        { code: 'BR', x: 365, y: 210 },
+        { code: 'SK', x: 385, y: 160 },
+        { code: 'WB', x: 395, y: 250 },
+        { code: 'JH', x: 360, y: 245 },
+        { code: 'OR', x: 350, y: 295 },
+        { code: 'CT', x: 315, y: 295 },
+        { code: 'MP', x: 255, y: 260 },
+        { code: 'GJ', x: 120, y: 270 },
+        { code: 'MH', x: 200, y: 330 },
+        { code: 'TS', x: 250, y: 370 },
+        { code: 'AP', x: 270, y: 405 },
+        { code: 'KA', x: 195, y: 415 },
+        { code: 'GA', x: 160, y: 385 },
+        { code: 'TN', x: 240, y: 470 },
+        { code: 'KL', x: 195, y: 490 },
+        { code: 'AS', x: 440, y: 175 },
+        { code: 'NL', x: 460, y: 192 },
+        { code: 'MN', x: 470, y: 210 },
+        { code: 'MZ', x: 455, y: 235 },
+        { code: 'ML', x: 425, y: 195 },
+    ]), []);
 
-    const handleClose = () => {
-        setSelectedState(null);
-    };
-
-    const toggleFavorite = (recipeId) => {
-        setFavorites(prev =>
-            prev.includes(recipeId)
-                ? prev.filter(id => id !== recipeId)
-                : [...prev, recipeId]
-        );
-
-        // Confetti burst effect
-        createConfetti();
-    };
-
-    const createConfetti = () => {
-        const colors = ['#FBBF24', '#F59E0B', '#D97706', '#FEF3C7'];
-        for (let i = 0; i < 30; i++) {
-            const confetti = document.createElement('div');
-            confetti.className = 'confetti-piece';
-            confetti.style.left = Math.random() * 100 + '%';
-            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-            confetti.style.animationDelay = Math.random() * 0.3 + 's';
-            document.body.appendChild(confetti);
-            setTimeout(() => confetti.remove(), 2000);
+    /* ──── Color interpolation for heatmap ──── */
+    const getHeatColor = (count) => {
+        if (!count) return '#1e293b';       // no data — dark slate
+        const t = Math.min(count / maxCount, 1);
+        // Gradient: #2b2b2b → #ff6b6b → #ff0000
+        if (t < 0.5) {
+            const u = t / 0.5;
+            const r = Math.round(43 + (255 - 43) * u);
+            const g = Math.round(43 + (107 - 43) * u);
+            const b = Math.round(43 + (107 - 43) * u);
+            return `rgb(${r},${g},${b})`;
         }
+        const u = (t - 0.5) / 0.5;
+        const r = 255;
+        const g = Math.round(107 - 107 * u);
+        const b = Math.round(107 - 107 * u);
+        return `rgb(${r},${g},${b})`;
     };
 
-    const stateData = [
-        { code: 'MH', name: 'Maharashtra', cx: 320, cy: 380 },
-        { code: 'KA', name: 'Karnataka', cx: 310, cy: 480 },
-        { code: 'TN', name: 'Tamil Nadu', cx: 340, cy: 550 },
-        { code: 'DL', name: 'Delhi', cx: 320, cy: 180 },
-        { code: 'PB', name: 'Punjab', cx: 300, cy: 140 },
-        { code: 'GJ', name: 'Gujarat', cx: 260, cy: 320 },
-        { code: 'WB', name: 'West Bengal', cx: 450, cy: 320 },
-        { code: 'RJ', name: 'Rajasthan', cx: 280, cy: 240 },
-        { code: 'KL', name: 'Kerala', cx: 310, cy: 560 },
-        { code: 'UP', name: 'Uttar Pradesh', cx: 360, cy: 220 },
-    ];
+    const getGlowIntensity = (count) => {
+        if (!count) return 0;
+        return 0.3 + 0.7 * Math.min(count / maxCount, 1);
+    };
 
-    const recipes = selectedState ? getRecipesByState(selectedState) : [];
+    /* ──── Find top 3 recipes for tooltip ──── */
+    const getTooltipRecipes = (code) => {
+        // We only have counts here — show count in tooltip
+        const name = names[code] || code;
+        const count = counts[code] || 0;
+        return { name, count };
+    };
+
+    const hoveredInfo = hoveredState ? getTooltipRecipes(hoveredState) : null;
+    const hoveredPos = hoveredState ? statePositions.find(s => s.code === hoveredState) : null;
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-dark-900 to-dark-800 py-16 px-4">
-            <div className="max-w-7xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="text-center mb-12"
-                >
-                    <h2 className="text-5xl font-display font-bold text-center mb-4 bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
-                        Explore India's Flavors
-                    </h2>
-                    <p className="text-center text-dark-300 text-lg mb-12">
-                        Click on any state to discover authentic regional recipes
-                    </p>
-                </motion.div>
+        <div className="relative w-full">
+            <svg viewBox="0 0 550 560" className="w-full h-auto">
+                {/* India outline */}
+                <path
+                    d="M 175 50 C 170 70, 165 90, 170 110 C 160 115, 150 130, 145 150 C 130 170, 115 200, 100 235 C 90 260, 85 275, 95 300 C 100 315, 120 330, 140 345 C 150 355, 155 365, 155 380 C 150 395, 145 410, 155 430 C 165 445, 175 455, 180 470 C 185 485, 190 500, 200 510 C 215 520, 230 515, 245 505 C 260 495, 270 480, 275 460 C 285 445, 290 425, 300 410 C 310 395, 325 375, 340 355 C 355 340, 365 325, 375 310 C 385 295, 395 275, 405 260 C 415 245, 425 230, 435 215 C 445 200, 460 185, 475 175 C 480 165, 475 150, 460 145 C 450 140, 435 142, 420 148 C 405 150, 395 145, 385 140 C 370 135, 355 140, 340 145 C 330 147, 320 140, 310 130 C 300 120, 290 108, 280 95 C 265 80, 250 70, 235 60 C 220 52, 200 48, 185 48 Z"
+                    fill="rgba(139, 92, 246, 0.06)"
+                    stroke="rgba(139, 92, 246, 0.25)"
+                    strokeWidth="1.5"
+                />
 
-                {/* SVG India Map */}
-                <div className="relative max-w-4xl mx-auto">
-                    <svg
-                        viewBox="0 0 600 700"
-                        className="w-full h-auto"
-                        style={{ filter: 'drop-shadow(0 10px 30px rgba(245, 158, 11, 0.3))' }}
-                    >
-                        {/* Simplified India outline */}
-                        <path
-                            d="M 300 100 L 350 120 L 380 160 L 400 200 L 420 250 L 450 300 L 480 350 L 490 400 L 480 450 L 460 500 L 440 530 L 400 560 L 360 580 L 320 590 L 280 580 L 250 560 L 230 530 L 220 500 L 210 450 L 200 400 L 190 350 L 180 300 L 200 250 L 230 200 L 260 160 L 280 130 Z"
-                            fill="rgba(251, 191, 36, 0.1)"
-                            stroke="#F59E0B"
-                            strokeWidth="2"
-                        />
+                {/* State circles with heatmap coloring */}
+                {statePositions.map((state) => {
+                    const count = counts[state.code] || 0;
+                    const color = getHeatColor(count);
+                    const glowIntensity = getGlowIntensity(count);
+                    const isHovered = hoveredState === state.code;
+                    const radius = count > 0 ? 16 + Math.min(count / maxCount, 1) * 6 : 14;
 
-                        {/* State markers */}
-                        {stateData.map((state) => (
-                            <g key={state.code}>
+                    return (
+                        <g key={state.code}>
+                            {/* Outer glow ring */}
+                            {count > 0 && (
                                 <motion.circle
-                                    cx={state.cx}
-                                    cy={state.cy}
-                                    r={hoveredState === state.code ? 25 : 20}
-                                    fill={selectedState === state.code ? '#10B981' : hoveredState === state.code ? '#F59E0B' : '#374151'}
-                                    stroke="#1F2937"
-                                    strokeWidth="2"
-                                    className="cursor-pointer transition-all duration-300"
-                                    onMouseEnter={() => setHoveredState(state.code)}
-                                    onMouseLeave={() => setHoveredState(null)}
-                                    onClick={() => handleStateClick(state.code)}
-                                    whileHover={{ scale: 1.2 }}
-                                    whileTap={{ scale: 0.9 }}
-                                    style={{
-                                        filter: hoveredState === state.code ? 'drop-shadow(0 0 15px rgba(16, 185, 129, 0.8))' : 'none',
-                                    }}
+                                    cx={state.x} cy={state.y}
+                                    r={radius + 8}
+                                    fill="none"
+                                    stroke={color}
+                                    strokeWidth="1"
+                                    opacity={isHovered ? 0.6 : glowIntensity * 0.3}
+                                    animate={{ r: isHovered ? radius + 14 : radius + 8 }}
+                                    transition={{ duration: 0.3 }}
                                 />
-                                <text
-                                    x={state.cx}
-                                    y={state.cy + 5}
-                                    textAnchor="middle"
-                                    fill="white"
-                                    fontSize="12"
-                                    fontWeight="bold"
-                                    className="pointer-events-none"
-                                >
-                                    {state.code}
-                                </text>
-                            </g>
-                        ))}
-                    </svg>
+                            )}
 
-                    {/* Hover tooltip */}
-                    <AnimatePresence>
-                        {hoveredState && (
-                            <motion.div
-                                initial={{ opacity: 0, y: 10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: 10 }}
-                                className="absolute top-4 left-1/2 transform -translate-x-1/2 glass px-6 py-3 rounded-xl"
+                            {/* Animated glow */}
+                            {count > 0 && isHovered && (
+                                <motion.circle
+                                    cx={state.x} cy={state.y}
+                                    r={radius + 20}
+                                    fill={color}
+                                    opacity={0}
+                                    animate={{ opacity: [0, 0.15, 0], r: [radius + 12, radius + 25, radius + 30] }}
+                                    transition={{ duration: 1.5, repeat: Infinity }}
+                                />
+                            )}
+
+                            {/* Main circle */}
+                            <motion.circle
+                                cx={state.x} cy={state.y}
+                                r={radius}
+                                fill={color}
+                                stroke={isHovered ? '#fff' : 'rgba(255,255,255,0.15)'}
+                                strokeWidth={isHovered ? 2.5 : 1}
+                                className="cursor-pointer"
+                                style={{
+                                    filter: isHovered
+                                        ? `drop-shadow(0 0 12px ${color}) drop-shadow(0 0 24px ${color})`
+                                        : count > 0
+                                            ? `drop-shadow(0 0 ${glowIntensity * 8}px ${color})`
+                                            : 'none',
+                                    transition: 'filter 0.3s ease, stroke 0.2s ease',
+                                }}
+                                onMouseEnter={() => setHoveredState(state.code)}
+                                onMouseLeave={() => setHoveredState(null)}
+                                onClick={() => onStateClick?.(state.code)}
+                                whileHover={{ scale: 1.15 }}
+                                whileTap={{ scale: 0.95 }}
+                            />
+
+                            {/* State code label */}
+                            <text
+                                x={state.x} y={state.y + 4}
+                                textAnchor="middle"
+                                fill="#fff"
+                                fontSize="10"
+                                fontWeight="700"
+                                className="pointer-events-none select-none"
+                                style={{ textShadow: '0 1px 3px rgba(0,0,0,0.6)' }}
                             >
-                                <div className="glass px-4 py-2 rounded-lg border border-primary-500/30">
-                                    <p className="text-white font-semibold">{stateData.find(s => s.code === hoveredState)?.name}</p>
-                                    <p className="text-primary-300 text-sm">Click to explore</p>
-                                </div>
-                            </motion.div>
-                        )}
-                    </AnimatePresence>
+                                {state.code}
+                            </text>
+                        </g>
+                    );
+                })}
+            </svg>
+
+            {/* Hover tooltip */}
+            <AnimatePresence>
+                {hoveredInfo && hoveredPos && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 8 }}
+                        transition={{ duration: 0.15 }}
+                        className="absolute pointer-events-none z-30 px-4 py-3 rounded-xl border"
+                        style={{
+                            left: `${(hoveredPos.x / 550) * 100}%`,
+                            top: `${(hoveredPos.y / 560) * 100 - 12}%`,
+                            transform: 'translate(-50%, -100%)',
+                            background: 'rgba(13, 17, 23, 0.95)',
+                            borderColor: 'rgba(139, 92, 246, 0.4)',
+                            boxShadow: '0 8px 24px rgba(0,0,0,0.5)',
+                            backdropFilter: 'blur(12px)',
+                        }}
+                    >
+                        <p className="text-white font-bold text-sm">{hoveredInfo.name}</p>
+                        <p className="text-violet-400 text-xs mt-0.5">
+                            {hoveredInfo.count > 0
+                                ? `🍽️ ${hoveredInfo.count} popular recipe${hoveredInfo.count !== 1 ? 's' : ''}`
+                                : 'No data yet'}
+                        </p>
+                        <p className="text-gray-500 text-[10px] mt-1">Click to explore →</p>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* Color scale legend */}
+            <div className="flex items-center justify-center gap-3 mt-4">
+                <span className="text-gray-500 text-xs">Less recipes</span>
+                <div className="flex gap-0.5">
+                    {[0, 0.2, 0.4, 0.6, 0.8, 1].map((t) => (
+                        <div
+                            key={t}
+                            className="w-6 h-3 rounded-sm"
+                            style={{ background: getHeatColor(t * maxCount) }}
+                        />
+                    ))}
                 </div>
-
-                {/* State Details Flyout Panel */}
-                <AnimatePresence>
-                    {selectedState && (
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-                            onClick={handleClose}
-                        >
-                            <motion.div
-                                initial={{ scale: 0.9, y: 50 }}
-                                animate={{ scale: 1, y: 0 }}
-                                exit={{ scale: 0.9, y: 50 }}
-                                className="glass max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-3xl p-8"
-                                onClick={(e) => e.stopPropagation()}
-                            >
-                                {/* Header */}
-                                <div className="flex justify-between items-center mb-6">
-                                    <h3 className="text-3xl font-bold text-primary-400">
-                                        {stateData.find(s => s.code === selectedState)?.name} Delicacies
-                                    </h3>
-                                    <button
-                                        onClick={handleClose}
-                                        className="glass p-2 rounded-full hover:bg-white/20 transition-colors"
-                                    >
-                                        <X className="w-6 h-6 text-white" />
-                                    </button>
-                                </div>
-
-                                {/* Recipe Cards Grid */}
-                                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                    {recipes.map((recipe, index) => (
-                                        <motion.div
-                                            key={recipe.id}
-                                            initial={{ opacity: 0, y: 20 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: index * 0.1 }}
-                                            className="glass rounded-2xl overflow-hidden hover-lift"
-                                        >
-                                            {/* Recipe Image */}
-                                            <div className="relative h-48 overflow-hidden">
-                                                <img
-                                                    src={recipe.image}
-                                                    alt={recipe.name}
-                                                    className="w-full h-full object-cover"
-                                                />
-                                                {/* Steam effect overlay */}
-                                                <div className="absolute inset-0 pointer-events-none">
-                                                    {[...Array(3)].map((_, i) => (
-                                                        <div
-                                                            key={i}
-                                                            className="steam-particle"
-                                                            style={{
-                                                                left: `${30 + i * 20}%`,
-                                                                bottom: '20%',
-                                                                animationDelay: `${i * 0.5}s`
-                                                            }}
-                                                        />
-                                                    ))}
-                                                </div>
-
-                                                {/* Badges */}
-                                                <div className="absolute top-2 left-2 flex flex-wrap gap-1">
-                                                    {recipe.badges.map(badge => (
-                                                        <span
-                                                            key={badge}
-                                                            className="bg-primary-500 text-white text-xs px-2 py-1 rounded-full font-semibold"
-                                                        >
-                                                            {badge}
-                                                        </span>
-                                                    ))}
-                                                </div>
-
-                                                {/* Price */}
-                                                <div className="absolute top-3 left-3 bg-primary-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                                                    {recipe.category}
-                                                </div>
-                                                <div className="absolute top-2 right-2 bg-black/60 text-primary-300 px-3 py-1 rounded-full font-bold">
-                                                    ₹{recipe.price}
-                                                </div>
-                                            </div>
-
-                                            {/* Recipe Info */}
-                                            <div className="p-4">
-                                                <h4 className="text-xl font-bold text-white mb-2">
-                                                    {recipe.name}
-                                                </h4>
-                                                <p className="text-sm text-gray-300 mb-3">
-                                                    {recipe.prepTime} • {recipe.servings} servings
-                                                </p>
-
-                                                {/* Nutrition */}
-                                                <div className="grid grid-cols-3 gap-2 mb-4 text-xs">
-                                                    <div className="text-center">
-                                                        <div className="text-saffron-400 font-bold">{recipe.nutrition.calories}</div>
-                                                        <div className="text-gray-400">Cal</div>
-                                                    </div>
-                                                    <div className="text-center">
-                                                        <div className="text-saffron-400 font-bold">{recipe.nutrition.protein}g</div>
-                                                        <div className="text-gray-400">Protein</div>
-                                                    </div>
-                                                    <div className="text-center">
-                                                        <div className="text-saffron-400 font-bold">{recipe.nutrition.carbs}g</div>
-                                                        <div className="text-gray-400">Carbs</div>
-                                                    </div>
-                                                </div>
-
-                                                {/* Actions */}
-                                                <div className="flex gap-2">
-                                                    <motion.button
-                                                        whileTap={{ scale: 0.9 }}
-                                                        onClick={() => toggleFavorite(recipe.id)}
-                                                        className={`flex-1 glass px-4 py-2 rounded-xl flex items-center justify-center gap-2 ${favorites.includes(recipe.id) ? 'bg-red-500/30' : ''
-                                                            }`}
-                                                    >
-                                                        <Heart
-                                                            className={`w-5 h-5 ${favorites.includes(recipe.id) ? 'fill-red-500 text-red-500' : 'text-white'
-                                                                }`}
-                                                        />
-                                                    </motion.button>
-                                                    <motion.button
-                                                        whileTap={{ scale: 0.9 }}
-                                                        className="flex-1 glass px-4 py-2 rounded-xl flex items-center justify-center gap-2"
-                                                    >
-                                                        <Share2 className="w-5 h-5 text-white" />
-                                                    </motion.button>
-                                                    <motion.button
-                                                        whileTap={{ scale: 0.9 }}
-                                                        className="flex-1 bg-saffron-500 px-4 py-2 rounded-xl flex items-center justify-center gap-2 text-white font-semibold"
-                                                    >
-                                                        <ChefHat className="w-5 h-5" />
-                                                    </motion.button>
-                                                </div>
-                                            </div>
-                                        </motion.div>
-                                    ))}
-                                </div>
-                            </motion.div>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
+                <span className="text-gray-500 text-xs">More recipes</span>
             </div>
-
-            <style jsx>{`
-        .confetti-piece {
-          position: fixed;
-          width: 10px;
-          height: 10px;
-          top: 50%;
-          animation: confetti-fall 2s ease-out forwards;
-          z-index: 9999;
-        }
-
-        @keyframes confetti-fall {
-          to {
-            transform: translateY(100vh) rotate(720deg);
-            opacity: 0;
-          }
-        }
-      `}</style>
         </div>
     );
 };

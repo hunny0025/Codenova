@@ -126,6 +126,32 @@ const AppLayout = ({ children }) => {
                             <div className="absolute right-full top-1/2 -translate-y-1/2 border-[6px] border-transparent border-r-gray-900"></div>
                         </div>
                     </button>
+
+                    {/* 7. Community Recipes */}
+                    <button
+                        onClick={() => navigate('/community')}
+                        className={`relative w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-200 hover:scale-110 hover:bg-white/5 group ${location.pathname === '/community' ? 'bg-white/20' : ''
+                            }`}
+                    >
+                        <span className="text-2xl opacity-60 group-hover:opacity-100">🌍</span>
+                        <div className="absolute left-[calc(100%+1rem)] top-1/2 -translate-y-1/2 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap z-[100] shadow-xl">
+                            Community Recipes
+                            <div className="absolute right-full top-1/2 -translate-y-1/2 border-[6px] border-transparent border-r-gray-900"></div>
+                        </div>
+                    </button>
+
+                    {/* 8. Create Recipe */}
+                    <button
+                        onClick={() => navigate('/create-recipe')}
+                        className={`relative w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-200 hover:scale-110 hover:bg-white/5 group ${location.pathname === '/create-recipe' ? 'bg-white/20' : ''
+                            }`}
+                    >
+                        <span className="text-2xl opacity-60 group-hover:opacity-100">✍️</span>
+                        <div className="absolute left-[calc(100%+1rem)] top-1/2 -translate-y-1/2 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap z-[100] shadow-xl">
+                            Share Your Recipe
+                            <div className="absolute right-full top-1/2 -translate-y-1/2 border-[6px] border-transparent border-r-gray-900"></div>
+                        </div>
+                    </button>
                 </nav>
 
                 {/* Theme Toggle & Settings - Bottom */}
@@ -199,6 +225,9 @@ const AppLayout = ({ children }) => {
                                 {location.pathname === '/grocery' && '🛒 Smart Grocery List'}
                                 {location.pathname === '/health' && '❤️ Health & Favorites'}
                                 {location.pathname === '/settings' && '⚙️ Settings'}
+                                {location.pathname === '/community' && '🌍 Community Recipes'}
+                                {location.pathname === '/create-recipe' && '✍️ Share Your Recipe'}
+                                {location.pathname.startsWith('/community/') && '🍽️ Recipe Details'}
                             </h2>
                         </div>
                     </div>

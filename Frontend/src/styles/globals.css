@@ -358,3 +358,21 @@ html {
   @apply w-6 h-6 rounded-full bg-white shadow-lg cursor-pointer;
   border: 2px solid #10B981;
 }
+
+/* Community form inputs */
+.input-field {
+  @apply w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 outline-none transition-all duration-200;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.input-field:focus {
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.input-field option {
+  background: #1e293b;
+  color: white;
+}

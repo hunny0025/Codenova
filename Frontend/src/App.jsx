@@ -12,6 +12,9 @@ import RegionalDiscovery from './pages/RegionalDiscovery';
 import GroceryList from './pages/GroceryList';
 import HealthFavorites from './pages/HealthFavorites';
 import Settings from './pages/Settings';
+import CommunityFeed from './pages/CommunityFeed';
+import CreateRecipe from './pages/CreateRecipe';
+import CommunityRecipeDetail from './pages/CommunityRecipeDetail';
 import AppLayout from './components/AppLayout';
 import InteractiveIndiaMap from './components/InteractiveIndiaMap';
 import RecipeCard from './components/RecipeCard';
@@ -335,6 +338,27 @@ const AppContent = () => {
                 } />
                 <Route path="/profile" element={
                     !isAuthenticated ? <Navigate to="/login" /> : <ProfilePage />
+                } />
+                <Route path="/community" element={
+                    !isAuthenticated ? <Navigate to="/login" /> : (
+                        <AppLayout>
+                            <CommunityFeed />
+                        </AppLayout>
+                    )
+                } />
+                <Route path="/create-recipe" element={
+                    !isAuthenticated ? <Navigate to="/login" /> : (
+                        <AppLayout>
+                            <CreateRecipe />
+                        </AppLayout>
+                    )
+                } />
+                <Route path="/community/:id" element={
+                    !isAuthenticated ? <Navigate to="/login" /> : (
+                        <AppLayout>
+                            <CommunityRecipeDetail />
+                        </AppLayout>
+                    )
                 } />
             </Routes>
 

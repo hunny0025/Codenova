@@ -1,0 +1,1865 @@
+{
+    "UP": {
+        "name": "Uttar Pradesh",
+        "recipes": [
+            {
+                "name": "Lucknowi Biryani",
+                "image": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=800",
+                "ingredients": [
+                    "basmati rice",
+                    "mutton",
+                    "yogurt",
+                    "saffron",
+                    "kewra water",
+                    "fried onions",
+                    "whole spices",
+                    "ghee"
+                ],
+                "steps": [
+                    "Marinate mutton in yogurt & spices for 2 hours",
+                    "Par-boil basmati rice with whole spices",
+                    "Layer mutton and rice in heavy pot",
+                    "Add saffron milk and kewra water",
+                    "Seal with dough and dum cook 45 min"
+                ],
+                "nutrition": {
+                    "calories": 520,
+                    "protein": 24,
+                    "carbs": 58,
+                    "fat": 22
+                },
+                "category": "Main Course",
+                "diet": "non-veg",
+                "prepTime": "90 min"
+            },
+            {
+                "name": "Tunday Kabab",
+                "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800",
+                "ingredients": [
+                    "minced mutton",
+                    "papaya paste",
+                    "garam masala",
+                    "khoya",
+                    "saffron",
+                    "cashew paste",
+                    "ghee"
+                ],
+                "steps": [
+                    "Mix mince with papaya paste, rest 1 hour",
+                    "Add khoya, cashew paste, and 160 spices",
+                    "Shape into flat rounds",
+                    "Shallow fry in ghee until golden",
+                    "Serve with rumali roti and mint chutney"
+                ],
+                "nutrition": {
+                    "calories": 380,
+                    "protein": 22,
+                    "carbs": 8,
+                    "fat": 28
+                },
+                "category": "Starter",
+                "diet": "non-veg",
+                "prepTime": "60 min"
+            },
+            {
+                "name": "Aloo Puri",
+                "image": "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=800",
+                "ingredients": [
+                    "potato",
+                    "wheat flour",
+                    "cumin",
+                    "green chilies",
+                    "turmeric",
+                    "coriander",
+                    "oil"
+                ],
+                "steps": [
+                    "Boil and mash potatoes with spices",
+                    "Knead flour dough, rest 15 min",
+                    "Roll small puris",
+                    "Deep fry until puffed and golden",
+                    "Serve hot with aloo sabzi"
+                ],
+                "nutrition": {
+                    "calories": 320,
+                    "protein": 6,
+                    "carbs": 48,
+                    "fat": 12
+                },
+                "category": "Breakfast",
+                "diet": "veg",
+                "prepTime": "30 min"
+            },
+            {
+                "name": "Petha",
+                "image": "https://images.unsplash.com/photo-1589301773859-34e08b5d2c3f?w=800",
+                "ingredients": [
+                    "ash gourd",
+                    "sugar",
+                    "lime water",
+                    "cardamom",
+                    "rose water",
+                    "kewra"
+                ],
+                "steps": [
+                    "Peel and cube ash gourd",
+                    "Soak in lime water overnight",
+                    "Boil in sugar syrup with cardamom",
+                    "Cook until translucent",
+                    "Dry and coat with sugar"
+                ],
+                "nutrition": {
+                    "calories": 180,
+                    "protein": 1,
+                    "carbs": 44,
+                    "fat": 0
+                },
+                "category": "Dessert",
+                "diet": "veg",
+                "prepTime": "120 min"
+            }
+        ]
+    },
+    "PB": {
+        "name": "Punjab",
+        "recipes": [
+            {
+                "name": "Sarson Ka Saag",
+                "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=800",
+                "ingredients": [
+                    "mustard greens",
+                    "spinach",
+                    "makki flour",
+                    "ginger",
+                    "garlic",
+                    "butter",
+                    "green chilies"
+                ],
+                "steps": [
+                    "Wash and chop greens",
+                    "Pressure cook until soft",
+                    "Blend coarsely with makki flour",
+                    "Temper with garlic and butter",
+                    "Serve with makki di roti and white butter"
+                ],
+                "nutrition": {
+                    "calories": 280,
+                    "protein": 10,
+                    "carbs": 32,
+                    "fat": 14
+                },
+                "category": "Main Course",
+                "diet": "veg",
+                "prepTime": "60 min"
+            },
+            {
+                "name": "Butter Chicken",
+                "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=800",
+                "ingredients": [
+                    "chicken",
+                    "tomatoes",
+                    "cream",
+                    "butter",
+                    "kasuri methi",
+                    "garam masala",
+                    "ginger-garlic paste"
+                ],
+                "steps": [
+                    "Marinate chicken in yogurt and spices",
+                    "Grill until charred",
+                    "Make tomato-butter gravy",
+                    "Add grilled chicken pieces",
+                    "Finish with cream and kasuri methi"
+                ],
+                "nutrition": {
+                    "calories": 480,
+                    "protein": 32,
+                    "carbs": 18,
+                    "fat": 32
+                },
+                "category": "Main Course",
+                "diet": "non-veg",
+                "prepTime": "50 min"
+            },
+            {
+                "name": "Amritsari Kulcha",
+                "image": "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=800",
+                "ingredients": [
+                    "maida",
+                    "potato",
+                    "paneer",
+                    "onion",
+                    "coriander",
+                    "ajwain",
+                    "butter"
+                ],
+                "steps": [
+                    "Knead soft maida dough, rest 2 hours",
+                    "Prepare spiced potato-paneer filling",
+                    "Stuff and roll kulchas",
+                    "Bake in tandoor or tawa",
+                    "Brush generously with butter"
+                ],
+                "nutrition": {
+                    "calories": 340,
+                    "protein": 10,
+                    "carbs": 52,
+                    "fat": 12
+                },
+                "category": "Bread",
+                "diet": "veg",
+                "prepTime": "45 min"
+            },
+            {
+                "name": "Dal Makhani",
+                "image": "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?w=800",
+                "ingredients": [
+                    "black urad dal",
+                    "rajma",
+                    "butter",
+                    "cream",
+                    "tomato puree",
+                    "ginger-garlic",
+                    "garam masala"
+                ],
+                "steps": [
+                    "Soak dal overnight, pressure cook",
+                    "Prepare tomato-butter base",
+                    "Simmer dal in gravy for 2 hours",
+                    "Add cream and butter",
+                    "Garnish with cream swirl"
+                ],
+                "nutrition": {
+                    "calories": 360,
+                    "protein": 14,
+                    "carbs": 42,
+                    "fat": 16
+                },
+                "category": "Main Course",
+                "diet": "veg",
+                "prepTime": "120 min"
+            },
+            {
+                "name": "Lassi",
+                "image": "https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?w=800",
+                "ingredients": [
+                    "thick yogurt",
+                    "sugar",
+                    "cardamom",
+                    "saffron",
+                    "ice",
+                    "rose water"
+                ],
+                "steps": [
+                    "Blend yogurt until smooth",
+                    "Add sugar and cardamom",
+                    "Churn well with ice",
+                    "Pour in tall glass",
+                    "Top with saffron strands and malai"
+                ],
+                "nutrition": {
+                    "calories": 180,
+                    "protein": 6,
+                    "carbs": 28,
+                    "fat": 5
+                },
+                "category": "Beverage",
+                "diet": "veg",
+                "prepTime": "5 min"
+            }
+        ]
+    },
+    "RJ": {
+        "name": "Rajasthan",
+        "recipes": [
+            {
+                "name": "Dal Baati Churma",
+                "image": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800",
+                "ingredients": [
+                    "wheat flour",
+                    "mixed dal",
+                    "jaggery",
+                    "ghee",
+                    "dry fruits",
+                    "spices"
+                ],
+                "steps": [
+                    "Knead stiff dough, shape into baatis",
+                    "Bake in oven until golden",
+                    "Prepare panchmel dal",
+                    "Make churma by crushing baati with ghee and jaggery",
+                    "Serve trio together"
+                ],
+                "nutrition": {
+                    "calories": 580,
+                    "protein": 16,
+                    "carbs": 72,
+                    "fat": 26
+                },
+                "category": "Main Course",
+                "diet": "veg",
+                "prepTime": "70 min"
+            },
+            {
+                "name": "Laal Maas",
+                "image": "https://images.unsplash.com/photo-1545247181-516773cae754?w=800",
+                "ingredients": [
+                    "mutton",
+                    "mathania chilies",
+                    "yogurt",
+                    "garlic",
+                    "mustard oil",
+                    "whole spices"
+                ],
+                "steps": [
+                    "Marinate mutton in yogurt",
+                    "Fry whole mathania chilies in mustard oil",
+                    "Sear mutton until browned",
+                    "Add chili paste and slow cook 2 hours",
+                    "Finish with garlic"
+                ],
+                "nutrition": {
+                    "calories": 420,
+                    "protein": 30,
+                    "carbs": 6,
+                    "fat": 32
+                },
+                "category": "Main Course",
+                "diet": "non-veg",
+                "prepTime": "150 min"
+            },
+            {
+                "name": "Ghevar",
+                "image": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=800",
+                "ingredients": [
+                    "maida",
+                    "ghee",
+                    "sugar",
+                    "milk",
+                    "saffron",
+                    "pistachios",
+                    "silver leaf"
+                ],
+                "steps": [
+                    "Make thin batter with flour, ghee, and ice water",
+                    "Pour into hot ghee in circular mold",
+                    "Fry until honeycomb structure forms",
+                    "Soak in sugar syrup",
+                    "Garnish with rabri and dry fruits"
+                ],
+                "nutrition": {
+                    "calories": 450,
+                    "protein": 4,
+                    "carbs": 62,
+                    "fat": 22
+                },
+                "category": "Dessert",
+                "diet": "veg",
+                "prepTime": "60 min"
+            }
+        ]
+    },
+    "DL": {
+        "name": "Delhi",
+        "recipes": [
+            {
+                "name": "Chole Bhature",
+                "image": "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=800",
+                "ingredients": [
+                    "chickpeas",
+                    "flour",
+                    "onions",
+                    "tomatoes",
+                    "chole masala",
+                    "yogurt",
+                    "oil"
+                ],
+                "steps": [
+                    "Soak chickpeas overnight",
+                    "Cook with tea bag for dark color",
+                    "Prepare onion-tomato masala",
+                    "Simmer chole in spiced gravy",
+                    "Deep fry bhature and serve"
+                ],
+                "nutrition": {
+                    "calories": 520,
+                    "protein": 18,
+                    "carbs": 68,
+                    "fat": 20
+                },
+                "category": "Main Course",
+                "diet": "veg",
+                "prepTime": "45 min"
+            },
+            {
+                "name": "Aloo Paratha",
+                "image": "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=800",
+                "ingredients": [
+                    "wheat flour",
+                    "potatoes",
+                    "green chilies",
+                    "coriander",
+                    "spices",
+                    "ghee"
+                ],
+                "steps": [
+                    "Boil and mash potatoes with spices",
+                    "Knead soft dough",
+                    "Stuff potato filling in dough balls",
+                    "Roll and cook on tawa with ghee",
+                    "Serve with yogurt and pickle"
+                ],
+                "nutrition": {
+                    "calories": 340,
+                    "protein": 8,
+                    "carbs": 52,
+                    "fat": 12
+                },
+                "category": "Breakfast",
+                "diet": "veg",
+                "prepTime": "30 min"
+            },
+            {
+                "name": "Chaat",
+                "image": "https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?w=800",
+                "ingredients": [
+                    "papdi",
+                    "boiled potato",
+                    "chickpeas",
+                    "yogurt",
+                    "tamarind chutney",
+                    "green chutney",
+                    "sev"
+                ],
+                "steps": [
+                    "Arrange papdi on plate",
+                    "Top with potato and chickpeas",
+                    "Drizzle yogurt and chutneys",
+                    "Sprinkle chaat masala and sev",
+                    "Serve immediately"
+                ],
+                "nutrition": {
+                    "calories": 280,
+                    "protein": 8,
+                    "carbs": 42,
+                    "fat": 10
+                },
+                "category": "Street Food",
+                "diet": "veg",
+                "prepTime": "15 min"
+            }
+        ]
+    },
+    "MH": {
+        "name": "Maharashtra",
+        "recipes": [
+            {
+                "name": "Pav Bhaji",
+                "image": "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=800",
+                "ingredients": [
+                    "potatoes",
+                    "mixed vegetables",
+                    "tomatoes",
+                    "pav bhaji masala",
+                    "butter",
+                    "pav buns"
+                ],
+                "steps": [
+                    "Boil and mash all vegetables",
+                    "Saute onion-tomato with masala",
+                    "Add mashed veggies and butter",
+                    "Mash on tawa to smooth paste",
+                    "Toast pav with butter and serve"
+                ],
+                "nutrition": {
+                    "calories": 420,
+                    "protein": 12,
+                    "carbs": 58,
+                    "fat": 16
+                },
+                "category": "Street Food",
+                "diet": "veg",
+                "prepTime": "30 min"
+            },
+            {
+                "name": "Vada Pav",
+                "image": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800",
+                "ingredients": [
+                    "potatoes",
+                    "besan",
+                    "pav buns",
+                    "green chutney",
+                    "dry garlic chutney",
+                    "spices"
+                ],
+                "steps": [
+                    "Make spiced potato filling balls",
+                    "Dip in besan batter",
+                    "Deep fry until golden",
+                    "Slit pav, apply chutneys",
+                    "Place vada in pav and serve"
+                ],
+                "nutrition": {
+                    "calories": 320,
+                    "protein": 8,
+                    "carbs": 45,
+                    "fat": 12
+                },
+                "category": "Street Food",
+                "diet": "veg",
+                "prepTime": "25 min"
+            },
+            {
+                "name": "Puran Poli",
+                "image": "https://images.unsplash.com/photo-1589301773859-34e08b5d2c3f?w=800",
+                "ingredients": [
+                    "wheat flour",
+                    "chana dal",
+                    "jaggery",
+                    "cardamom",
+                    "ghee",
+                    "nutmeg"
+                ],
+                "steps": [
+                    "Cook chana dal until soft",
+                    "Mash with jaggery and cardamom",
+                    "Knead wheat flour dough",
+                    "Stuff dal mixture, roll thin",
+                    "Cook on tawa with ghee"
+                ],
+                "nutrition": {
+                    "calories": 380,
+                    "protein": 10,
+                    "carbs": 62,
+                    "fat": 10
+                },
+                "category": "Dessert",
+                "diet": "veg",
+                "prepTime": "45 min"
+            },
+            {
+                "name": "Misal Pav",
+                "image": "https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?w=800",
+                "ingredients": [
+                    "sprouted moth beans",
+                    "onion",
+                    "tomato",
+                    "farsan",
+                    "pav",
+                    "lime",
+                    "coriander"
+                ],
+                "steps": [
+                    "Cook moth beans with spicy gravy",
+                    "Prepare fiery red tarri",
+                    "Layer usal, tarri, and farsan",
+                    "Garnish with onion, lime, coriander",
+                    "Serve with buttered pav"
+                ],
+                "nutrition": {
+                    "calories": 350,
+                    "protein": 15,
+                    "carbs": 48,
+                    "fat": 12
+                },
+                "category": "Breakfast",
+                "diet": "veg",
+                "prepTime": "35 min"
+            }
+        ]
+    },
+    "GJ": {
+        "name": "Gujarat",
+        "recipes": [
+            {
+                "name": "Dhokla",
+                "image": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800",
+                "ingredients": [
+                    "besan",
+                    "yogurt",
+                    "eno",
+                    "mustard seeds",
+                    "curry leaves",
+                    "green chilies",
+                    "lemon"
+                ],
+                "steps": [
+                    "Mix besan with yogurt and water",
+                    "Add eno and pour into greased plate",
+                    "Steam for 15 minutes",
+                    "Temper with mustard, curry leaves",
+                    "Garnish and cut into pieces"
+                ],
+                "nutrition": {
+                    "calories": 180,
+                    "protein": 6,
+                    "carbs": 32,
+                    "fat": 3
+                },
+                "category": "Snack",
+                "diet": "veg",
+                "prepTime": "25 min"
+            },
+            {
+                "name": "Undhiyu",
+                "image": "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?w=800",
+                "ingredients": [
+                    "surti papdi",
+                    "sweet potato",
+                    "raw banana",
+                    "brinjal",
+                    "muthiya",
+                    "coconut",
+                    "spices"
+                ],
+                "steps": [
+                    "Prepare muthiya dumplings",
+                    "Layer all vegetables in heavy pot",
+                    "Add coconut-spice paste",
+                    "Slow cook inverted (undhu)",
+                    "Mix gently and serve with puri"
+                ],
+                "nutrition": {
+                    "calories": 320,
+                    "protein": 8,
+                    "carbs": 48,
+                    "fat": 12
+                },
+                "category": "Main Course",
+                "diet": "veg",
+                "prepTime": "90 min"
+            },
+            {
+                "name": "Khandvi",
+                "image": "https://images.unsplash.com/photo-1589301773859-34e08b5d2c3f?w=800",
+                "ingredients": [
+                    "besan",
+                    "buttermilk",
+                    "turmeric",
+                    "ginger-chili paste",
+                    "mustard seeds",
+                    "coconut"
+                ],
+                "steps": [
+                    "Cook besan-buttermilk paste until thick",
+                    "Spread thin on back of thali",
+                    "Let cool slightly",
+                    "Roll tightly into scrolls",
+                    "Temper with mustard and garnish"
+                ],
+                "nutrition": {
+                    "calories": 150,
+                    "protein": 5,
+                    "carbs": 22,
+                    "fat": 4
+                },
+                "category": "Snack",
+                "diet": "veg",
+                "prepTime": "30 min"
+            }
+        ]
+    },
+    "KA": {
+        "name": "Karnataka",
+        "recipes": [
+            {
+                "name": "Masala Dosa",
+                "image": "https://images.unsplash.com/photo-1630383249896-424e482df921?w=800",
+                "ingredients": [
+                    "dosa batter",
+                    "potatoes",
+                    "onions",
+                    "curry leaves",
+                    "mustard seeds",
+                    "turmeric"
+                ],
+                "steps": [
+                    "Make crispy thin dosa on hot tawa",
+                    "Prepare spiced potato masala filling",
+                    "Place masala on dosa",
+                    "Fold and serve",
+                    "Accompaniments: coconut chutney and sambar"
+                ],
+                "nutrition": {
+                    "calories": 280,
+                    "protein": 8,
+                    "carbs": 48,
+                    "fat": 6
+                },
+                "category": "Breakfast",
+                "diet": "veg",
+                "prepTime": "30 min"
+            },
+            {
+                "name": "Bisi Bele Bath",
+                "image": "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?w=800",
+                "ingredients": [
+                    "rice",
+                    "toor dal",
+                    "mixed vegetables",
+                    "tamarind",
+                    "bisi bele bath powder",
+                    "ghee"
+                ],
+                "steps": [
+                    "Cook rice and dal together",
+                    "Add vegetables and tamarind",
+                    "Mix in special spice powder",
+                    "Simmer until flavors meld",
+                    "Temper with ghee and serve"
+                ],
+                "nutrition": {
+                    "calories": 380,
+                    "protein": 14,
+                    "carbs": 54,
+                    "fat": 12
+                },
+                "category": "Main Course",
+                "diet": "veg",
+                "prepTime": "40 min"
+            },
+            {
+                "name": "Mysore Pak",
+                "image": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=800",
+                "ingredients": [
+                    "besan",
+                    "sugar",
+                    "ghee",
+                    "cardamom"
+                ],
+                "steps": [
+                    "Roast besan in ghee until aromatic",
+                    "Make sugar syrup to one-string",
+                    "Mix besan into syrup",
+                    "Keep adding ghee while stirring",
+                    "Pour into tray and cut when set"
+                ],
+                "nutrition": {
+                    "calories": 450,
+                    "protein": 6,
+                    "carbs": 55,
+                    "fat": 24
+                },
+                "category": "Dessert",
+                "diet": "veg",
+                "prepTime": "35 min"
+            }
+        ]
+    },
+    "TN": {
+        "name": "Tamil Nadu",
+        "recipes": [
+            {
+                "name": "Idli Sambar",
+                "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=800",
+                "ingredients": [
+                    "idli batter",
+                    "toor dal",
+                    "mixed vegetables",
+                    "sambar powder",
+                    "tamarind",
+                    "curry leaves"
+                ],
+                "steps": [
+                    "Steam idlis in mold for 12 min",
+                    "Cook dal with vegetables",
+                    "Add tamarind water and sambar powder",
+                    "Temper with mustard and curry leaves",
+                    "Serve idlis with hot sambar and coconut chutney"
+                ],
+                "nutrition": {
+                    "calories": 220,
+                    "protein": 10,
+                    "carbs": 42,
+                    "fat": 2
+                },
+                "category": "Breakfast",
+                "diet": "veg",
+                "prepTime": "25 min"
+            },
+            {
+                "name": "Chettinad Chicken",
+                "image": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=800",
+                "ingredients": [
+                    "chicken",
+                    "fennel seeds",
+                    "star anise",
+                    "kalpasi",
+                    "coconut",
+                    "curry leaves",
+                    "red chilies"
+                ],
+                "steps": [
+                    "Dry roast and grind Chettinad spices",
+                    "Marinate chicken with ground paste",
+                    "Saute onions and tomatoes",
+                    "Add chicken and cook covered",
+                    "Finish with curry leaves and coconut oil"
+                ],
+                "nutrition": {
+                    "calories": 380,
+                    "protein": 28,
+                    "carbs": 12,
+                    "fat": 24
+                },
+                "category": "Main Course",
+                "diet": "non-veg",
+                "prepTime": "45 min"
+            },
+            {
+                "name": "Filter Coffee",
+                "image": "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=800",
+                "ingredients": [
+                    "coffee powder",
+                    "chicory",
+                    "milk",
+                    "sugar",
+                    "hot water"
+                ],
+                "steps": [
+                    "Add coffee powder to filter",
+                    "Pour hot water and let brew 15 min",
+                    "Boil milk with sugar",
+                    "Mix decoction with hot milk",
+                    "Pour between dabara-tumbler for froth"
+                ],
+                "nutrition": {
+                    "calories": 80,
+                    "protein": 2,
+                    "carbs": 10,
+                    "fat": 3
+                },
+                "category": "Beverage",
+                "diet": "veg",
+                "prepTime": "10 min"
+            }
+        ]
+    },
+    "KL": {
+        "name": "Kerala",
+        "recipes": [
+            {
+                "name": "Appam with Stew",
+                "image": "https://images.unsplash.com/photo-1630383249896-424e482df921?w=800",
+                "ingredients": [
+                    "rice",
+                    "coconut",
+                    "yeast",
+                    "mixed vegetables",
+                    "coconut milk",
+                    "spices",
+                    "curry leaves"
+                ],
+                "steps": [
+                    "Ferment rice-coconut batter overnight",
+                    "Make lacy appams in appa chatti",
+                    "Cook vegetables in thin coconut milk",
+                    "Add thick coconut milk at end",
+                    "Serve appam with creamy stew"
+                ],
+                "nutrition": {
+                    "calories": 290,
+                    "protein": 12,
+                    "carbs": 42,
+                    "fat": 8
+                },
+                "category": "Breakfast",
+                "diet": "veg",
+                "prepTime": "40 min"
+            },
+            {
+                "name": "Kerala Fish Curry",
+                "image": "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=800",
+                "ingredients": [
+                    "king fish",
+                    "kokum",
+                    "coconut",
+                    "red chilies",
+                    "fenugreek",
+                    "curry leaves",
+                    "coconut oil"
+                ],
+                "steps": [
+                    "Grind coconut with chilies for paste",
+                    "Boil with kokum and curry leaves",
+                    "Add fish pieces gently",
+                    "Simmer without stirring 15 min",
+                    "Rest overnight for best flavor"
+                ],
+                "nutrition": {
+                    "calories": 310,
+                    "protein": 26,
+                    "carbs": 8,
+                    "fat": 20
+                },
+                "category": "Main Course",
+                "diet": "non-veg",
+                "prepTime": "30 min"
+            },
+            {
+                "name": "Payasam",
+                "image": "https://images.unsplash.com/photo-1589301773859-34e08b5d2c3f?w=800",
+                "ingredients": [
+                    "vermicelli",
+                    "milk",
+                    "sugar",
+                    "ghee",
+                    "cashews",
+                    "raisins",
+                    "cardamom"
+                ],
+                "steps": [
+                    "Roast vermicelli in ghee until golden",
+                    "Boil milk and add vermicelli",
+                    "Cook until creamy",
+                    "Add sugar and cardamom",
+                    "Garnish with fried cashews and raisins"
+                ],
+                "nutrition": {
+                    "calories": 320,
+                    "protein": 8,
+                    "carbs": 52,
+                    "fat": 10
+                },
+                "category": "Dessert",
+                "diet": "veg",
+                "prepTime": "25 min"
+            }
+        ]
+    },
+    "WB": {
+        "name": "West Bengal",
+        "recipes": [
+            {
+                "name": "Macher Jhol",
+                "image": "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=800",
+                "ingredients": [
+                    "rohu fish",
+                    "potatoes",
+                    "tomatoes",
+                    "panch phoron",
+                    "turmeric",
+                    "green chilies",
+                    "mustard oil"
+                ],
+                "steps": [
+                    "Marinate fish with turmeric and salt",
+                    "Fry fish and potatoes in mustard oil",
+                    "Temper with panch phoron",
+                    "Add tomatoes and water",
+                    "Simmer until gravy thickens"
+                ],
+                "nutrition": {
+                    "calories": 320,
+                    "protein": 28,
+                    "carbs": 12,
+                    "fat": 18
+                },
+                "category": "Main Course",
+                "diet": "non-veg",
+                "prepTime": "35 min"
+            },
+            {
+                "name": "Rasgulla",
+                "image": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=800",
+                "ingredients": [
+                    "chhena",
+                    "sugar",
+                    "cardamom",
+                    "rose water",
+                    "water"
+                ],
+                "steps": [
+                    "Make fresh chhena from milk",
+                    "Knead until smooth",
+                    "Shape into small balls",
+                    "Boil in sugar syrup 20 min",
+                    "Cool in syrup and serve chilled"
+                ],
+                "nutrition": {
+                    "calories": 220,
+                    "protein": 4,
+                    "carbs": 48,
+                    "fat": 3
+                },
+                "category": "Dessert",
+                "diet": "veg",
+                "prepTime": "45 min"
+            },
+            {
+                "name": "Kosha Mangsho",
+                "image": "https://images.unsplash.com/photo-1545247181-516773cae754?w=800",
+                "ingredients": [
+                    "mutton",
+                    "onions",
+                    "yogurt",
+                    "mustard oil",
+                    "ginger-garlic",
+                    "garam masala",
+                    "sugar"
+                ],
+                "steps": [
+                    "Marinate mutton in yogurt and spices",
+                    "Slow cook onions until deep brown",
+                    "Add mutton and sear well",
+                    "Cook covered on low heat 90 min",
+                    "Finish with garam masala"
+                ],
+                "nutrition": {
+                    "calories": 440,
+                    "protein": 32,
+                    "carbs": 10,
+                    "fat": 30
+                },
+                "category": "Main Course",
+                "diet": "non-veg",
+                "prepTime": "120 min"
+            }
+        ]
+    },
+    "OR": {
+        "name": "Odisha",
+        "recipes": [
+            {
+                "name": "Dalma",
+                "image": "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?w=800",
+                "ingredients": [
+                    "chana dal",
+                    "raw banana",
+                    "papaya",
+                    "pumpkin",
+                    "panch phoron",
+                    "coconut",
+                    "turmeric"
+                ],
+                "steps": [
+                    "Cook dal with chopped vegetables",
+                    "Add turmeric and salt",
+                    "Temper with panch phoron in ghee",
+                    "Garnish with fresh coconut",
+                    "Serve with steamed rice"
+                ],
+                "nutrition": {
+                    "calories": 260,
+                    "protein": 12,
+                    "carbs": 42,
+                    "fat": 6
+                },
+                "category": "Main Course",
+                "diet": "veg",
+                "prepTime": "40 min"
+            },
+            {
+                "name": "Pakhala Bhata",
+                "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=800",
+                "ingredients": [
+                    "cooked rice",
+                    "water",
+                    "yogurt",
+                    "mustard seeds",
+                    "curry leaves",
+                    "green chilies"
+                ],
+                "steps": [
+                    "Soak cooked rice in water overnight",
+                    "Natural fermentation occurs",
+                    "Temper with mustard and curry leaves",
+                    "Add yogurt for creaminess",
+                    "Serve with fried fish or badi"
+                ],
+                "nutrition": {
+                    "calories": 200,
+                    "protein": 5,
+                    "carbs": 40,
+                    "fat": 2
+                },
+                "category": "Main Course",
+                "diet": "veg",
+                "prepTime": "15 min"
+            }
+        ]
+    },
+    "HR": {
+        "name": "Haryana",
+        "recipes": [
+            {
+                "name": "Bajra Khichdi",
+                "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=800",
+                "ingredients": [
+                    "bajra",
+                    "moong dal",
+                    "ghee",
+                    "cumin",
+                    "ginger",
+                    "green chilies",
+                    "spices"
+                ],
+                "steps": [
+                    "Soak bajra for a few hours",
+                    "Cook with moong dal and water",
+                    "Add ginger, chilies, turmeric",
+                    "Simmer until soft and mushy",
+                    "Top generously with ghee"
+                ],
+                "nutrition": {
+                    "calories": 340,
+                    "protein": 12,
+                    "carbs": 56,
+                    "fat": 8
+                },
+                "category": "Main Course",
+                "diet": "veg",
+                "prepTime": "45 min"
+            },
+            {
+                "name": "Kadhi Pakora",
+                "image": "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?w=800",
+                "ingredients": [
+                    "besan",
+                    "yogurt",
+                    "onion",
+                    "fenugreek",
+                    "turmeric",
+                    "red chili",
+                    "mustard seeds"
+                ],
+                "steps": [
+                    "Make yogurt-besan kadhi",
+                    "Prepare onion besan pakoras",
+                    "Deep fry pakoras until golden",
+                    "Add pakoras to simmering kadhi",
+                    "Temper and serve with rice"
+                ],
+                "nutrition": {
+                    "calories": 310,
+                    "protein": 10,
+                    "carbs": 38,
+                    "fat": 14
+                },
+                "category": "Main Course",
+                "diet": "veg",
+                "prepTime": "40 min"
+            }
+        ]
+    },
+    "BR": {
+        "name": "Bihar",
+        "recipes": [
+            {
+                "name": "Litti Chokha",
+                "image": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800",
+                "ingredients": [
+                    "wheat flour",
+                    "sattu",
+                    "mustard oil",
+                    "brinjal",
+                    "tomato",
+                    "onion",
+                    "garlic"
+                ],
+                "steps": [
+                    "Make dough and sattu filling with spices",
+                    "Stuff and shape into littis",
+                    "Bake over coal or in oven",
+                    "Roast brinjal and mash for chokha",
+                    "Dip litti in ghee and serve with chokha"
+                ],
+                "nutrition": {
+                    "calories": 400,
+                    "protein": 14,
+                    "carbs": 58,
+                    "fat": 14
+                },
+                "category": "Main Course",
+                "diet": "veg",
+                "prepTime": "50 min"
+            },
+            {
+                "name": "Sattu Paratha",
+                "image": "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=800",
+                "ingredients": [
+                    "wheat flour",
+                    "roasted gram flour",
+                    "onion",
+                    "green chilies",
+                    "lemon",
+                    "spices"
+                ],
+                "steps": [
+                    "Mix sattu with onion, chilies, spices",
+                    "Knead wheat dough",
+                    "Stuff sattu filling and roll",
+                    "Cook on tawa with ghee",
+                    "Serve with pickle and curd"
+                ],
+                "nutrition": {
+                    "calories": 330,
+                    "protein": 12,
+                    "carbs": 50,
+                    "fat": 10
+                },
+                "category": "Breakfast",
+                "diet": "veg",
+                "prepTime": "25 min"
+            }
+        ]
+    },
+    "AP": {
+        "name": "Andhra Pradesh",
+        "recipes": [
+            {
+                "name": "Hyderabadi Biryani",
+                "image": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=800",
+                "ingredients": [
+                    "basmati rice",
+                    "goat meat",
+                    "yogurt",
+                    "fried onions",
+                    "saffron",
+                    "mint",
+                    "whole spices"
+                ],
+                "steps": [
+                    "Marinate meat in yogurt and spices",
+                    "Par-boil rice with whole spices",
+                    "Layer meat and rice alternately",
+                    "Add saffron milk and fried onions",
+                    "Seal and dum cook for 45 min"
+                ],
+                "nutrition": {
+                    "calories": 550,
+                    "protein": 26,
+                    "carbs": 62,
+                    "fat": 22
+                },
+                "category": "Main Course",
+                "diet": "non-veg",
+                "prepTime": "90 min"
+            },
+            {
+                "name": "Gongura Pachadi",
+                "image": "https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?w=800",
+                "ingredients": [
+                    "gongura leaves",
+                    "red chilies",
+                    "garlic",
+                    "mustard seeds",
+                    "fenugreek",
+                    "oil"
+                ],
+                "steps": [
+                    "Saute gongura leaves until wilted",
+                    "Dry roast chilies, garlic, fenugreek",
+                    "Grind to coarse paste",
+                    "Mix with cooked gongura",
+                    "Temper with mustard seeds"
+                ],
+                "nutrition": {
+                    "calories": 120,
+                    "protein": 3,
+                    "carbs": 12,
+                    "fat": 7
+                },
+                "category": "Condiment",
+                "diet": "veg",
+                "prepTime": "20 min"
+            },
+            {
+                "name": "Pesarattu",
+                "image": "https://images.unsplash.com/photo-1630383249896-424e482df921?w=800",
+                "ingredients": [
+                    "green moong dal",
+                    "rice",
+                    "ginger",
+                    "green chilies",
+                    "cumin",
+                    "onion"
+                ],
+                "steps": [
+                    "Soak moong dal and rice",
+                    "Grind to smooth batter with ginger",
+                    "Spread thin on hot tawa",
+                    "Add onion upma on top",
+                    "Fold and serve with ginger chutney"
+                ],
+                "nutrition": {
+                    "calories": 240,
+                    "protein": 12,
+                    "carbs": 38,
+                    "fat": 4
+                },
+                "category": "Breakfast",
+                "diet": "veg",
+                "prepTime": "20 min"
+            }
+        ]
+    },
+    "TS": {
+        "name": "Telangana",
+        "recipes": [
+            {
+                "name": "Sakinalu",
+                "image": "https://images.unsplash.com/photo-1589301773859-34e08b5d2c3f?w=800",
+                "ingredients": [
+                    "rice flour",
+                    "sesame seeds",
+                    "cumin",
+                    "ajwain",
+                    "hot water",
+                    "oil"
+                ],
+                "steps": [
+                    "Make rice flour dough with hot water",
+                    "Add sesame, cumin, ajwain",
+                    "Shape into concentric circles",
+                    "Deep fry until crispy",
+                    "Store in airtight container"
+                ],
+                "nutrition": {
+                    "calories": 200,
+                    "protein": 3,
+                    "carbs": 30,
+                    "fat": 8
+                },
+                "category": "Snack",
+                "diet": "veg",
+                "prepTime": "45 min"
+            },
+            {
+                "name": "Jonna Rotte",
+                "image": "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=800",
+                "ingredients": [
+                    "jowar flour",
+                    "water",
+                    "salt"
+                ],
+                "steps": [
+                    "Knead jowar dough with hot water",
+                    "Pat into flat rounds by hand",
+                    "Cook on hot tawa",
+                    "Flip and cook both sides",
+                    "Serve with spicy curries"
+                ],
+                "nutrition": {
+                    "calories": 180,
+                    "protein": 5,
+                    "carbs": 38,
+                    "fat": 1
+                },
+                "category": "Bread",
+                "diet": "veg",
+                "prepTime": "15 min"
+            }
+        ]
+    },
+    "GA": {
+        "name": "Goa",
+        "recipes": [
+            {
+                "name": "Fish Curry Rice",
+                "image": "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=800",
+                "ingredients": [
+                    "pomfret",
+                    "kokum",
+                    "coconut",
+                    "red chilies",
+                    "tamarind",
+                    "turmeric",
+                    "onion"
+                ],
+                "steps": [
+                    "Grind coconut with chilies for masala",
+                    "Cook onion base with masala",
+                    "Add kokum and tamarind water",
+                    "Gently add fish pieces",
+                    "Simmer 10 min and serve with rice"
+                ],
+                "nutrition": {
+                    "calories": 340,
+                    "protein": 24,
+                    "carbs": 28,
+                    "fat": 14
+                },
+                "category": "Main Course",
+                "diet": "non-veg",
+                "prepTime": "30 min"
+            },
+            {
+                "name": "Bebinca",
+                "image": "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=800",
+                "ingredients": [
+                    "coconut milk",
+                    "sugar",
+                    "egg yolks",
+                    "maida",
+                    "ghee",
+                    "cardamom",
+                    "nutmeg"
+                ],
+                "steps": [
+                    "Make batter with coconut milk and flour",
+                    "Layer by layer baking process",
+                    "Each of 7 layers baked separately",
+                    "Add ghee between layers",
+                    "Cool, slice, and serve"
+                ],
+                "nutrition": {
+                    "calories": 420,
+                    "protein": 6,
+                    "carbs": 52,
+                    "fat": 22
+                },
+                "category": "Dessert",
+                "diet": "veg",
+                "prepTime": "180 min"
+            }
+        ]
+    },
+    "AS": {
+        "name": "Assam",
+        "recipes": [
+            {
+                "name": "Masor Tenga",
+                "image": "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?w=800",
+                "ingredients": [
+                    "rohu fish",
+                    "tomato",
+                    "lemon",
+                    "mustard seeds",
+                    "turmeric",
+                    "fenugreek",
+                    "curry leaves"
+                ],
+                "steps": [
+                    "Fry fish lightly in mustard oil",
+                    "Cook tomatoes with mustard and fenugreek",
+                    "Add water for tangy gravy",
+                    "Return fish to the gravy",
+                    "Finish with lemon juice"
+                ],
+                "nutrition": {
+                    "calories": 280,
+                    "protein": 24,
+                    "carbs": 10,
+                    "fat": 16
+                },
+                "category": "Main Course",
+                "diet": "non-veg",
+                "prepTime": "30 min"
+            },
+            {
+                "name": "Pitha",
+                "image": "https://images.unsplash.com/photo-1589301773859-34e08b5d2c3f?w=800",
+                "ingredients": [
+                    "rice flour",
+                    "jaggery",
+                    "coconut",
+                    "sesame",
+                    "banana leaf"
+                ],
+                "steps": [
+                    "Make rice flour dough",
+                    "Prepare jaggery-coconut filling",
+                    "Stuff and shape pithas",
+                    "Steam on banana leaves",
+                    "Serve warm"
+                ],
+                "nutrition": {
+                    "calories": 200,
+                    "protein": 3,
+                    "carbs": 42,
+                    "fat": 4
+                },
+                "category": "Dessert",
+                "diet": "veg",
+                "prepTime": "40 min"
+            }
+        ]
+    },
+    "HP": {
+        "name": "Himachal Pradesh",
+        "recipes": [
+            {
+                "name": "Siddu",
+                "image": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800",
+                "ingredients": [
+                    "wheat flour",
+                    "yeast",
+                    "poppy seeds",
+                    "walnuts",
+                    "green peas",
+                    "spices"
+                ],
+                "steps": [
+                    "Make yeast dough, let rise",
+                    "Prepare walnut-poppy seed filling",
+                    "Stuff dough with filling",
+                    "Steam until fluffy and cooked",
+                    "Serve with ghee and dal"
+                ],
+                "nutrition": {
+                    "calories": 300,
+                    "protein": 9,
+                    "carbs": 44,
+                    "fat": 10
+                },
+                "category": "Main Course",
+                "diet": "veg",
+                "prepTime": "60 min"
+            },
+            {
+                "name": "Chana Madra",
+                "image": "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?w=800",
+                "ingredients": [
+                    "chickpeas",
+                    "yogurt",
+                    "ghee",
+                    "cardamom",
+                    "cinnamon",
+                    "cloves",
+                    "turmeric"
+                ],
+                "steps": [
+                    "Soak and cook chickpeas",
+                    "Prepare yogurt-based gravy",
+                    "Add whole spices and turmeric",
+                    "Simmer chickpeas in gravy",
+                    "Finish with ghee"
+                ],
+                "nutrition": {
+                    "calories": 320,
+                    "protein": 14,
+                    "carbs": 40,
+                    "fat": 12
+                },
+                "category": "Main Course",
+                "diet": "veg",
+                "prepTime": "45 min"
+            }
+        ]
+    },
+    "UK": {
+        "name": "Uttarakhand",
+        "recipes": [
+            {
+                "name": "Aloo Ke Gutke",
+                "image": "https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=800",
+                "ingredients": [
+                    "potatoes",
+                    "mustard oil",
+                    "jakhiya seeds",
+                    "red chilies",
+                    "turmeric",
+                    "coriander"
+                ],
+                "steps": [
+                    "Boil potatoes and cube roughly",
+                    "Heat mustard oil until smoking",
+                    "Crackle jakhiya seeds",
+                    "Add potatoes and spices",
+                    "Toss until crispy on edges"
+                ],
+                "nutrition": {
+                    "calories": 250,
+                    "protein": 4,
+                    "carbs": 38,
+                    "fat": 10
+                },
+                "category": "Side Dish",
+                "diet": "veg",
+                "prepTime": "25 min"
+            }
+        ]
+    },
+    "JH": {
+        "name": "Jharkhand",
+        "recipes": [
+            {
+                "name": "Dhuska",
+                "image": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800",
+                "ingredients": [
+                    "rice",
+                    "urad dal",
+                    "onion",
+                    "ginger",
+                    "green chilies",
+                    "oil"
+                ],
+                "steps": [
+                    "Soak rice and dal, grind to batter",
+                    "Add onion and ginger",
+                    "Shape into thick rounds",
+                    "Deep fry until golden",
+                    "Serve with chokha or curry"
+                ],
+                "nutrition": {
+                    "calories": 280,
+                    "protein": 8,
+                    "carbs": 40,
+                    "fat": 10
+                },
+                "category": "Breakfast",
+                "diet": "veg",
+                "prepTime": "30 min"
+            }
+        ]
+    },
+    "CT": {
+        "name": "Chhattisgarh",
+        "recipes": [
+            {
+                "name": "Chila",
+                "image": "https://images.unsplash.com/photo-1630383249896-424e482df921?w=800",
+                "ingredients": [
+                    "rice flour",
+                    "urad dal",
+                    "onion",
+                    "tomato",
+                    "green chilies",
+                    "coriander"
+                ],
+                "steps": [
+                    "Make thin batter with rice flour and dal",
+                    "Heat tawa and grease lightly",
+                    "Pour and spread batter thin",
+                    "Cook both sides until crispy",
+                    "Serve with green chutney"
+                ],
+                "nutrition": {
+                    "calories": 220,
+                    "protein": 7,
+                    "carbs": 36,
+                    "fat": 5
+                },
+                "category": "Breakfast",
+                "diet": "veg",
+                "prepTime": "20 min"
+            }
+        ]
+    },
+    "MP": {
+        "name": "Madhya Pradesh",
+        "recipes": [
+            {
+                "name": "Poha",
+                "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=800",
+                "ingredients": [
+                    "flattened rice",
+                    "onion",
+                    "potato",
+                    "peanuts",
+                    "mustard seeds",
+                    "turmeric",
+                    "lemon"
+                ],
+                "steps": [
+                    "Rinse and drain poha",
+                    "Fry peanuts, add mustard seeds",
+                    "Saute onion and potato",
+                    "Add poha and turmeric",
+                    "Garnish with lemon, sev, coriander"
+                ],
+                "nutrition": {
+                    "calories": 260,
+                    "protein": 6,
+                    "carbs": 42,
+                    "fat": 8
+                },
+                "category": "Breakfast",
+                "diet": "veg",
+                "prepTime": "15 min"
+            },
+            {
+                "name": "Bhutte Ka Kees",
+                "image": "https://images.unsplash.com/photo-1645177628172-a94c1f96e6db?w=800",
+                "ingredients": [
+                    "corn",
+                    "milk",
+                    "cumin",
+                    "mustard seeds",
+                    "green chilies",
+                    "sugar",
+                    "coconut"
+                ],
+                "steps": [
+                    "Grate fresh corn kernels",
+                    "Boil milk and add grated corn",
+                    "Cook until thick and creamy",
+                    "Temper with cumin and mustard",
+                    "Garnish with coconut and coriander"
+                ],
+                "nutrition": {
+                    "calories": 240,
+                    "protein": 7,
+                    "carbs": 38,
+                    "fat": 8
+                },
+                "category": "Snack",
+                "diet": "veg",
+                "prepTime": "25 min"
+            }
+        ]
+    },
+    "MN": {
+        "name": "Manipur",
+        "recipes": [
+            {
+                "name": "Eromba",
+                "image": "https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?w=800",
+                "ingredients": [
+                    "vegetables",
+                    "ngari (fermented fish)",
+                    "red chilies",
+                    "coriander",
+                    "potatoes"
+                ],
+                "steps": [
+                    "Boil vegetables until tender",
+                    "Mash roughly with ngari",
+                    "Add roasted chili paste",
+                    "Garnish with fresh coriander",
+                    "Serve with steamed rice"
+                ],
+                "nutrition": {
+                    "calories": 180,
+                    "protein": 8,
+                    "carbs": 28,
+                    "fat": 4
+                },
+                "category": "Main Course",
+                "diet": "non-veg",
+                "prepTime": "25 min"
+            }
+        ]
+    },
+    "SK": {
+        "name": "Sikkim",
+        "recipes": [
+            {
+                "name": "Momos",
+                "image": "https://images.unsplash.com/photo-1626074353765-517a681e40be?w=800",
+                "ingredients": [
+                    "maida",
+                    "cabbage",
+                    "carrot",
+                    "onion",
+                    "garlic",
+                    "ginger",
+                    "soy sauce"
+                ],
+                "steps": [
+                    "Make thin dough wrappers",
+                    "Prepare mixed vegetable filling",
+                    "Fill and pleat momos",
+                    "Steam for 12 minutes",
+                    "Serve with spicy tomato chutney"
+                ],
+                "nutrition": {
+                    "calories": 240,
+                    "protein": 8,
+                    "carbs": 36,
+                    "fat": 7
+                },
+                "category": "Snack",
+                "diet": "veg",
+                "prepTime": "40 min"
+            },
+            {
+                "name": "Thukpa",
+                "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800",
+                "ingredients": [
+                    "noodles",
+                    "vegetables",
+                    "garlic",
+                    "ginger",
+                    "soy sauce",
+                    "chili flakes",
+                    "green onion"
+                ],
+                "steps": [
+                    "Prepare vegetable broth with garlic and ginger",
+                    "Cook noodles separately",
+                    "Saute vegetables",
+                    "Combine noodles and broth",
+                    "Top with chili oil and green onion"
+                ],
+                "nutrition": {
+                    "calories": 300,
+                    "protein": 10,
+                    "carbs": 48,
+                    "fat": 8
+                },
+                "category": "Main Course",
+                "diet": "veg",
+                "prepTime": "30 min"
+            }
+        ]
+    },
+    "NL": {
+        "name": "Nagaland",
+        "recipes": [
+            {
+                "name": "Smoked Pork with Bamboo Shoot",
+                "image": "https://images.unsplash.com/photo-1545247181-516773cae754?w=800",
+                "ingredients": [
+                    "smoked pork",
+                    "bamboo shoot",
+                    "raja mircha",
+                    "ginger",
+                    "garlic",
+                    "axone"
+                ],
+                "steps": [
+                    "Slice smoked pork",
+                    "Boil bamboo shoot to remove bitterness",
+                    "Cook pork with ginger and garlic",
+                    "Add bamboo shoot and raja mircha",
+                    "Simmer until flavors blend"
+                ],
+                "nutrition": {
+                    "calories": 380,
+                    "protein": 28,
+                    "carbs": 8,
+                    "fat": 26
+                },
+                "category": "Main Course",
+                "diet": "non-veg",
+                "prepTime": "45 min"
+            }
+        ]
+    },
+    "ML": {
+        "name": "Meghalaya",
+        "recipes": [
+            {
+                "name": "Jadoh",
+                "image": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=800",
+                "ingredients": [
+                    "red rice",
+                    "pork",
+                    "turmeric",
+                    "onion",
+                    "ginger",
+                    "bay leaf",
+                    "black pepper"
+                ],
+                "steps": [
+                    "Cook pork with turmeric and ginger",
+                    "Saute onion and bay leaf",
+                    "Add red rice and pork broth",
+                    "Cook until rice absorbs liquid",
+                    "Serve hot"
+                ],
+                "nutrition": {
+                    "calories": 420,
+                    "protein": 22,
+                    "carbs": 50,
+                    "fat": 14
+                },
+                "category": "Main Course",
+                "diet": "non-veg",
+                "prepTime": "50 min"
+            }
+        ]
+    }
+}
