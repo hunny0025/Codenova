@@ -1,0 +1,40 @@
+# Model Configuration for FlavorSense AI
+# All ML constants are defined here — no hardcoding in code.
+
+model:
+  registry_path: "ml/model_registry.json"
+  models_dir: "ml/models"
+  top_n: 5
+  fallback: "cosine_similarity"
+
+features:
+  - flavor_similarity
+  - calorie_distance
+  - cuisine_match
+  - diet_match
+  - budget_distance
+  - ingredient_count
+  - price_estimate
+
+action_weights:
+  view: 0.2
+  like: 1.0
+  save: 1.5
+  dislike: -0.5
+
+training:
+  test_size: 0.2
+  random_state: 42
+  n_estimators: 100
+  max_depth: 4
+  learning_rate: 0.1
+
+retrain:
+  min_new_interactions: 50
+
+users:
+  default_calorie_goal: 2000
+  default_budget: 30.0
+
+cache:
+  recipe_ttl_seconds: 600

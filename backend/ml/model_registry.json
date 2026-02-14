@@ -1,0 +1,15 @@
+{
+    "current_model": "model_v1.pkl",
+    "trained_on": "2026-02-14",
+    "samples": 96,
+    "rmse": 0.5382,
+    "features_used": 7,
+    "history": [
+        {
+            "version": "model_v1.pkl",
+            "trained_on": "2026-02-14",
+            "samples": 96,
+            "rmse": 0.5382
+        }
+    ]
+}

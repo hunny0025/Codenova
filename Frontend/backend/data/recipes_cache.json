@@ -1,0 +1,257 @@
+[
+    {
+        "id": "1",
+        "title": "Avocado Toast",
+        "ingredients": [
+            "avocado",
+            "bread",
+            "salt",
+            "pepper"
+        ],
+        "nutrition": {
+            "calories": 300,
+            "sugar": 2
+        },
+        "price": 5.0,
+        "tags": [
+            "veg",
+            "vegan",
+            "breakfast"
+        ],
+        "cuisine": "american"
+    },
+    {
+        "id": "2",
+        "title": "Chicken Curry",
+        "ingredients": [
+            "chicken",
+            "curry paste",
+            "coconut milk"
+        ],
+        "nutrition": {
+            "calories": 600,
+            "sodium": 800
+        },
+        "price": 12.0,
+        "tags": [
+            "non-veg",
+            "dinner"
+        ],
+        "cuisine": "indian"
+    },
+    {
+        "id": "3",
+        "title": "Vegan Salad",
+        "ingredients": [
+            "lettuce",
+            "tofu",
+            "tomato",
+            "cucumber"
+        ],
+        "nutrition": {
+            "calories": 200,
+            "sugar": 3
+        },
+        "price": 8.0,
+        "tags": [
+            "veg",
+            "vegan",
+            "jain",
+            "lunch"
+        ],
+        "cuisine": "mediterranean"
+    },
+    {
+        "id": "4",
+        "title": "Grilled Salmon",
+        "ingredients": [
+            "salmon",
+            "lemon",
+            "herbs"
+        ],
+        "nutrition": {
+            "calories": 500,
+            "sugar": 0,
+            "sodium": 100
+        },
+        "price": 15.0,
+        "tags": [
+            "non-veg",
+            "dinner"
+        ],
+        "cuisine": "american"
+    },
+    {
+        "id": "5",
+        "title": "Pasta Alfredo",
+        "ingredients": [
+            "pasta",
+            "cream",
+            "cheese"
+        ],
+        "nutrition": {
+            "calories": 800,
+            "sugar": 5,
+            "sodium": 400
+        },
+        "price": 10.0,
+        "tags": [
+            "veg",
+            "dinner"
+        ],
+        "cuisine": "italian"
+    },
+    {
+        "id": "6",
+        "title": "Fruit Bowl",
+        "ingredients": [
+            "apple",
+            "banana",
+            "berry"
+        ],
+        "nutrition": {
+            "calories": 150,
+            "sugar": 20
+        },
+        "price": 4.0,
+        "tags": [
+            "veg",
+            "vegan",
+            "jain",
+            "breakfast"
+        ],
+        "cuisine": "american"
+    },
+    {
+        "id": "7",
+        "title": "Vegetable Stir Fry",
+        "ingredients": [
+            "broccoli",
+            "carrot",
+            "soy sauce"
+        ],
+        "nutrition": {
+            "calories": 350,
+            "sodium": 600
+        },
+        "price": 7.0,
+        "tags": [
+            "veg",
+            "vegan",
+            "dinner"
+        ],
+        "cuisine": "chinese"
+    },
+    {
+        "id": "8",
+        "title": "Paneer Tikka",
+        "ingredients": [
+            "paneer",
+            "yogurt",
+            "spices",
+            "bell pepper",
+            "onion"
+        ],
+        "nutrition": {
+            "calories": 450,
+            "sugar": 2,
+            "sodium": 300
+        },
+        "price": 9.0,
+        "tags": [
+            "veg",
+            "dinner"
+        ],
+        "cuisine": "indian"
+    },
+    {
+        "id": "9",
+        "title": "Dal Tadka",
+        "ingredients": [
+            "lentils",
+            "onion",
+            "tomato",
+            "garlic",
+            "spices"
+        ],
+        "nutrition": {
+            "calories": 320,
+            "sugar": 3,
+            "sodium": 200
+        },
+        "price": 5.0,
+        "tags": [
+            "veg",
+            "vegan",
+            "lunch"
+        ],
+        "cuisine": "indian"
+    },
+    {
+        "id": "10",
+        "title": "Mushroom Risotto",
+        "ingredients": [
+            "rice",
+            "mushroom",
+            "cheese",
+            "onion",
+            "herbs"
+        ],
+        "nutrition": {
+            "calories": 550,
+            "sugar": 3,
+            "sodium": 350
+        },
+        "price": 11.0,
+        "tags": [
+            "veg",
+            "dinner"
+        ],
+        "cuisine": "italian"
+    },
+    {
+        "id": "11",
+        "title": "Tofu Pad Thai",
+        "ingredients": [
+            "tofu",
+            "rice noodles",
+            "peanuts",
+            "bean sprouts",
+            "soy sauce"
+        ],
+        "nutrition": {
+            "calories": 480,
+            "sugar": 6,
+            "sodium": 500
+        },
+        "price": 9.0,
+        "tags": [
+            "veg",
+            "vegan",
+            "dinner"
+        ],
+        "cuisine": "thai"
+    },
+    {
+        "id": "12",
+        "title": "Butter Chicken",
+        "ingredients": [
+            "chicken",
+            "butter",
+            "cream",
+            "tomato",
+            "spices"
+        ],
+        "nutrition": {
+            "calories": 700,
+            "sugar": 4,
+            "sodium": 600
+        },
+        "price": 14.0,
+        "tags": [
+            "non-veg",
+            "dinner"
+        ],
+        "cuisine": "indian"
+    }
+]

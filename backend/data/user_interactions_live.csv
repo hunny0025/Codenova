@@ -1,0 +1,7 @@
+user_id,recipe_id,action,rating
+test_u1,1,like,1.0
+test_u1,2,dislike,-0.5
+test_u1,1,like,1.0
+test_u1,2,dislike,-0.5
+test_u1,1,like,1.0
+test_u1,2,dislike,-0.5
