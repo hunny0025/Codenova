@@ -1,5 +1,5 @@
 
-# FlavorSense AI Backend
+# FlavorSense 
 
 FlavorSense AI is a modular, scalable Flask backend for personalized food recommendation.
 
